@@ -1,46 +1,58 @@
 package com.example.meliexampletest
 
-
-import org.junit.Assert.*
-
 import org.junit.After
-import org.junit.Assert
+import org.junit.Assert.assertEquals
+import org.junit.Assert.assertNotNull
 import org.junit.Before
 import org.junit.Test
 
 class CalculatorTest {
-var calculator= Calculator()
+
+    private lateinit var calculator: Calculator
+
     @Before
     fun setUp() {
+        calculator = Calculator()
     }
 
     @After
     fun tearDown() {
-        
-    }
-    @Test
-    fun add2() {
-
-        assertEquals(30,10+20)
-    }
-    @Test
-    fun add() {
-
-        assertEquals(30,calculator.add(10,20))
-    }
-    @Test
-    fun substract() {
-
-        assertEquals(3,calculator.substract(7,4))
-    }
-    @Test
-    fun substract2() {
-        assertEquals(-10,calculator.substract(10,20))
+        calculator.cleanState()
     }
 
-   @Test
+    @Test
+    fun add_positiveNumbers_check() {
+        assertEquals(30, calculator.add(10, 20))
+    }
+
+    @Test
+    fun add_negativeNumbers_check() {
+        assertEquals(-30, calculator.add(-10, -20))
+    }
+
+
+    @Test
+    fun add_negativeAndPositiveNumbers_check() {
+        assertEquals(10, calculator.add(-10, 20))
+    }
+
+    @Test
+    fun subtract_positiveNumbers_check() {
+        assertEquals(3, calculator.subtract(7, 4))
+    }
+
+    @Test
+    fun subtract_negativeNumbers_check() {
+        assertEquals(10, calculator.subtract(-10, -20))
+    }
+
+    @Test
+    fun subtract_negativeAndPositiveNumbers_check() {
+        assertEquals(30, calculator.subtract(10, -20))
+    }
+
+    @Test
     fun objectNotNull() {
         assertNotNull("calculator debe estar inicializada", calculator)
- }
-
+    }
 }

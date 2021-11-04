@@ -2,12 +2,19 @@ package com.example.meliexampletest
 
 class Calculator {
 
-        fun add (numberOne:Int, numberTwo:Int):Int {
-        return numberOne+numberTwo
+    init {
+        println("init calculator - done!")
     }
 
-    fun substract (numberOne:Int, numberTwo:Int):Int {
-        return numberOne-numberTwo
+    fun add(numberOne: Int, numberTwo: Int): Int {
+        return numberOne + numberTwo
     }
 
+    fun subtract(numberOne: Int, numberTwo: Int): Int {
+        return numberOne - numberTwo
+    }
+
+    fun cleanState() {
+        println("clean state - done!")
+    }
 }
