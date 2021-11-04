@@ -1,7 +1,9 @@
 package com.example.meliexampletest
 
-import junit.framework.Assert.*
 import org.junit.After
+import org.junit.Assert.assertFalse
+import org.junit.Assert.assertTrue
+import org.junit.Assert.assertNotNull
 import org.junit.Before
 import org.junit.Test
 
@@ -47,7 +49,7 @@ class CreditCartTest {
      * Validar MAX 16 dígitos
      * Validar que solo sean numéricos
      * Validar que el lo guardado en CreditCard.digit sea
-       el formato: **** **** **** 1234 (siendo 1234 los ultimos dígitos de la tarjeta)
+    el formato: **** **** **** 1234 (siendo 1234 los ultimos dígitos de la tarjeta)
      **/
 
     /** PROBLEMA 2
