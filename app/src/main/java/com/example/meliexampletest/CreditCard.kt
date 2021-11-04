@@ -37,6 +37,7 @@ class CreditCard {
     }
 
     fun setDigits(value: String): Boolean {
+
         if (value.length != DIGITS_SIZE)
             throw IllegalArgumentException("Debe contener 16 caracteres")
 
