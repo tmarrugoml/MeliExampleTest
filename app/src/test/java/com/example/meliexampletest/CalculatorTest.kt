@@ -30,7 +30,6 @@ class CalculatorTest {
         assertEquals(-30, calculator.add(-10, -20))
     }
 
-
     @Test
     fun add_negativeAndPositiveNumbers_check() {
         assertEquals(10, calculator.add(-10, 20))
