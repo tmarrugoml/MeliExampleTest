@@ -49,12 +49,11 @@ class CreditCartTest {
      * Validar MAX 16 dígitos
      * Validar que solo sean numéricos
      * Validar que el lo guardado en CreditCard.digit sea
-    el formato: **** **** **** 1234 (siendo 1234 los ultimos dígitos de la tarjeta)
+       el formato: **** **** **** 1234 (siendo 1234 los ultimos dígitos de la tarjeta)
      **/
 
     /** PROBLEMA 2
-     * Validar la fecha de expiracion con formato MM/yy
-     * Validar el año sea mayor o igual al actual
-     * Validar que el mes sea mayor que el actual
+     * Validar la fecha de expiracion con formato MM/YY
+     * Validar la fecha sea mayor que la actual
      **/
 }

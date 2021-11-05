@@ -51,7 +51,7 @@ class CreditCard {
 
     fun setExpirationDate(date: String): Boolean {
 
-        val dtfOut: DateTimeFormatter = DateTimeFormat.forPattern("MM/yy")
+        val dtfOut: DateTimeFormatter = DateTimeFormat.forPattern("MM/YY")
 
         val value = dtfOut.parseDateTime(date)
 
